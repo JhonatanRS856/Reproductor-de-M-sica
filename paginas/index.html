@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Songs Info</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rock+Salt&family=Space+Mono:ital,wght@0,400;0,700;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rock+Salt&family=Space+Mono:ital,wght@0,400;0,700;1,700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="bg-black">
+    <div class="container position-relative">
+        <!-- Seccion para Elegir cancion -->
+        <div class="search-song text-light mx-auto mt-5">
+            <div class="input-s">
+                <a href="#">
+                    <span id="titulo-head">Elegir Canción</span>
+                    <button class="btn-buscar" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a href="#" id="toggleLink">
+                            <svg id="iconToggle-down" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+                            </svg>
+                            <svg id="iconToggle-up" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-caret-up-fill d-none" viewBox="0 0 16 16">
+                                <path d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/>
+                            </svg>
+                        </a>
+                    </button>
+                </a>
+            </div>
+            <!-- Lista con todas las canciones y los atibutos necesarios -->
+            <div class="lista-song" id="toggleDiv">
+                <ul class="">
+                    <li>
+                        <a class="song-link" href="#" onclick="changeSong(
+                            '../songs/getyourWish.mp3',
+                            'Get Your Wish',
+                            'Porter Robinson',
+                            '03:37',
+                            'B',
+                            '95',
+                            '95 BPM',
+                            '../img/GetYourWish.jpg',
+                            '0px 0px 10px rgb(86, 170, 209)')">
+                            <picture>
+                                <img src="../img/GetYourWish.jpg" alt="">
+                            </picture>
+                            <div>Get Your Wish <br><span class="d-block">Porter Robinson</span></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="song-link" href="#" onclick="changeSong(
+                            '../songs/monsters.mp3',
+                            'Monsters',
+                            'NOA',
+                            '04:11',
+                            'C♯/D',
+                            '84',
+                            '84 BPM',
+                            '../img/monsters.jpg',
+                            '0px 0px 10px rgb(186, 196, 201)')">
+                            <picture>
+                                <img src="../img/monsters.jpg" alt="">
+                            </picture>
+                            <div>
+                                Monsters <br>
+                                <span class="d-block">NOA</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="song-link" href="#" onclick="changeSong(
+                            '../songs/BreakingTheHabit.mp3',
+                            'Breaking The Habit',
+                            'Linkin Park',
+                            '03:18',
+                            'E',
+                            '200',
+                            '200 BPM',
+                            '../img/bthabit.png',
+                            '0px 0px 10px rgb(142, 138, 114)')">
+                            <picture>
+                                <img src="../img/bthabit.png" alt="">
+                            </picture>
+                            <div>
+                                Breaking The Habit <br>
+                                <span class="d-block">Linkin Park</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="song-link" href="#" onclick="changeSong(
+                            '../songs/SomeKind.mp3',
+                            'Some Kind of Magic',
+                            'LVTHER',
+                            '03:15',
+                            'B',
+                            '168',
+                            '168 BPM',
+                            '../img/somekind.jpg',
+                            '0px 0px 10px rgb(252, 222, 121)')">
+                            <picture>
+                                <img src="../img/somekind.jpg" alt="">
+                            </picture>
+                            <div>
+                                Some Kind of Magic (Feat. MYZICA)<br>
+                                <span class="d-block">LVTHER</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="song-link" href="#" onclick="changeSong(
+                            '../songs/Selfish.mp3',
+                            'Selfish',
+                            'NEYMI',
+                            '02:45',
+                            'A',
+                            '95',
+                            '95 BPM',
+                            '../img/selfish.jpg',
+                            '0px 0px 10px rgb(86, 170, 209)')">
+                            <picture>
+                                <img src="../img/selfish.jpg" alt="">
+                            </picture>
+                            <div>
+                                Selfish <br>
+                                <span class="d-block">NEYMI</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="song-link" href="#" onclick="changeSong(
+                            '../songs/Royalty.mp3',
+                            'Royalty (feat. Neoni) (Wiguez & Alltair Remix)',
+                            'Egzod & Maestro Chives',
+                            '03:33',
+                            'A',
+                            '172',
+                            '172 BPM',
+                            '../img/Royalty.jpg',
+                            '0px 0px 10px rgb(86, 170, 209)')">
+                            <picture>
+                                <img src="../img/Royalty.jpg" alt="">
+                            </picture>
+                            <div>
+                                Royalty (feat. Neoni) (Wiguez & Alltair Remix)<br>
+                                <span class="d-block">Egzod & Maestro Chives</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="song-link" href="#" onclick="changeSong(
+                            '../songs/sweater.mp3',
+                            'Sweater Weather',
+                            'The Neighbourhood',
+                            '03:50',
+                            'A♯/B♭',
+                            '124',
+                            '124 BPM',
+                            '../img/sw-song.jpg',
+                            '0px 0px 10px rgb(86, 170, 209)')">
+                            <picture>
+                                <img src="../img/sw-song.jpg" alt="">
+                            </picture>
+                            <div>
+                                Sweater Weather<br>
+                                <span class="d-block">The Neighbourhood</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="song-link" href="#" onclick="changeSong(
+                            '../songs/SayGoodbye.mp3',
+                            'Say Goodbye (Feat. Marvin Divine)',
+                            'Unknown Brain',
+                            '03:50',
+                            'E',
+                            '170',
+                            '170 BPM',
+                            '../img/saygoodbye.jpg',
+                            '0px 0px 10px #8c8f8e')">
+                            <picture>
+                                <img src="../img/saygoodbye.jpg" alt="">
+                            </picture>
+                            <div>
+                                Say Goodbye (Feat. Marvin Divine)<br>
+                                <span class="d-block">Unknown Brain</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="song-link" href="#" onclick="changeSong(
+                            '../songs/hotgirl.mp3',
+                            'hot girl bummer',
+                            'blackbear',
+                            '03:08',
+                            'F♯/G♭',
+                            '130',
+                            '130 BPM',
+                            '../img/hotgirl.jpg',
+                            '0px 0px 10px #2e52b1')">
+                            <picture>
+                                <img src="../img/hotgirl.jpg" alt="">
+                            </picture>
+                            <div>
+                                hot girl bummer<br>
+                                <span class="d-block">blackbear</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="song-link" href="#" onclick="changeSong(
+                            '../songs/makememove.mp3',
+                            'Make Me Move (Feat. Karra)',
+                            'Culture Code',
+                            '03:16',
+                            'G♯/A♭',
+                            '95',
+                            '95 BPM',
+                            '../img/makememove.jpg',
+                            '0px 0px 10px #3785a9')">
+                            <picture>
+                                <img src="../img/makememove.jpg" alt="">
+                            </picture>
+                            <div>
+                                Make Me Move (Feat. Karra)<br>
+                                <span class="d-block">Culture Code</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="song-link" href="#" onclick="changeSong(
+                            '../songs/AboutMe.mp3',
+                            'About Me',
+                            'Koven x ROY KNOX',
+                            '02:34',
+                            'G♯/A♭',
+                            '180',
+                            '180 BPM',
+                            '../img/AboutMe.jpg',
+                            '0px 0px 10px #c75c77')">
+                            <picture>
+                                <img src="../img/AboutMe.jpg" alt="">
+                            </picture>
+                            <div>
+                                About Me<br>
+                                <span class="d-block">Koven x ROY KNOX</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Seccion del banner de la cancion e informacion de la canción -->
+
+        <div class="banner-song px-3 mt-5" id="banner">
+            <div class="row position-absolute z-3">
+                <div class="col-11 col p-3">
+                    <h1 class="song-name">Get Your Wish</h1>
+                    <p  class="artist-name">Porter Robinson</p>
+                    <div class="d-flex text-light align-items-center">
+                        <div class="icon-bn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-clock" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z" />
+                                <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0" />
+                            </svg>
+                        </div>
+                        <span class="mx-2 time-song">03:37</span>
+                        <div class="icon-bn">
+                            <svg fill="#ffffff" height="64px" width="64px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-31.4 -31.4 376.80 376.80" xml:space="preserve" stroke="#ffffff" stroke-width="0.0031400000000000004" transform="matrix(1, 0, 0, 1, 0, 0)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="6.28"></g><g id="SVGRepo_iconCarrier"> <path d="M281.853,46.631c-0.39-2.035-1.66-3.794-3.47-4.802l-11.257-6.271l5.297-9.511c1.881-3.378,0.668-7.641-2.709-9.521 c-3.38-1.881-7.641-0.667-9.521,2.709l-5.297,9.511l-11.257-6.269c-1.81-1.008-3.975-1.162-5.908-0.422 c-1.936,0.74-3.442,2.3-4.117,4.259l-13.806,40.109c-1.103,3.207,0.25,6.743,3.213,8.394l4.741,2.642l-23.115,41.501L184.592,17.11 C182.703,7.516,173.563,0,163.783,0h-56.052c-9.778,0-18.918,7.516-20.809,17.11L46.102,224.425 c-0.002,0.012-0.004,0.023-0.006,0.035l-13.729,69.725c-0.998,5.067,0.205,10.132,3.3,13.895C38.76,311.842,43.496,314,48.66,314 h174.195c5.163,0,9.898-2.158,12.993-5.92c3.095-3.763,4.298-8.827,3.301-13.896l-13.732-69.741 c-0.001-0.002-0.001-0.004-0.001-0.004l-16.584-84.225l31.16-55.944l4.742,2.642c1.072,0.598,2.243,0.885,3.402,0.885 c2.046,0,4.056-0.896,5.425-2.571l26.836-32.853C281.708,50.769,282.241,48.665,281.853,46.631z M100.659,19.816 c0.6-3.044,3.971-5.816,7.072-5.816h56.052c3.103,0,6.473,2.771,7.072,5.815l23.249,118.069L164,191.933 c-6.17-2.645-13.121-4.627-21.242-5.363v-14.92h10.96c3.866,0,7-3.134,7-7s-3.134-7-7-7h-10.96v-41.211h10.96c3.866,0,7-3.134,7-7 c0-3.866-3.134-7-7-7h-10.96v-41.21h10.96c3.866,0,7-3.134,7-7s-3.134-7-7-7h-10.96V34.938c0-3.866-3.134-7-7-7 c-3.866,0-7,3.134-7,7v12.291h-10.96c-3.866,0-7,3.134-7,7s3.134,7,7,7h10.96v41.21h-10.96c-3.866,0-7,3.134-7,7 c0,3.866,3.134,7,7,7h10.96v41.211h-10.96c-3.866,0-7,3.134-7,7s3.134,7,7,7h10.96v14.92c-19.447,1.763-32.189,10.688-43.564,18.666 c-7.894,5.536-14.975,10.493-23.52,12.573L100.659,19.816z M225.036,299.188c-0.432,0.523-1.206,0.813-2.181,0.813H48.66 c-0.976,0-1.75-0.289-2.181-0.814c-0.432-0.524-0.565-1.34-0.377-2.297l12.675-64.372c14.147-1.593,24.455-8.807,34.455-15.82 c12.059-8.457,23.448-16.444,42.525-16.444c19.077,0,30.466,7.987,42.524,16.444c10.001,7.014,20.308,14.228,34.456,15.82 l12.675,64.371C225.602,297.846,225.468,298.662,225.036,299.188z M209.842,217.809c-8.545-2.08-15.627-7.037-23.521-12.574 c-3.175-2.227-6.456-4.527-9.959-6.726l21.928-39.367L209.842,217.809z M246.427,71.829l-11.474-6.392l9.177-26.662l20.136,11.216 L246.427,71.829z"></path> </g></svg>
+                        </div>
+                        <span class="mx-2" id="bannerBPM">95</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Informacion de la canción puesta en unas pequeñas card -->
+
+        <section id="cards-songs-info" class="">
+            <div class="container-md my-5">
+                <div class="row row-cols-2 row-cols-md-3 text-center g-3">
+                    <div class="col p-1">
+                        <div class="box">
+                            <h3>Key</h3>
+                            <span id="key">B</span>
+                        </div>
+                    </div>
+                    <div class="col p-1">
+                        <div class="box">
+                            <h3>Duración</h3>
+                            <span class="time-song">03:37</span>
+                        </div>
+                    </div>
+                    <div class="col p-1">
+                        <div class="box">
+                            <h3>Tempo</h3>
+                            <span id="tempo">95 BPM</span>
+                        </div>
+                    </div>
+                    <div class="col p-1">
+                        <div class="box">
+                            <h3>Listen On</h3>
+                            <span><i class="bi bi-spotify"></i> Spotify</span>
+                        </div>
+                    </div>
+                    <div class="col p-1">
+                        <div class="box">
+                            <h3>Listen On</h3>
+                            <span><i class="bi bi-apple"></i> Music</span>
+                        </div>
+                    </div>
+                    <div class="col p-1">
+                        <div class="box">
+                            <h3>Listen On</h3>
+                            <span><i class="bi bi-amazon"></i> Amazon</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Un reproductor para la cancion con toda los botones necesarios -->
+
+        <div class="audio-player mx-auto" id="musicDiv">
+            <audio src="../songs/getyourWish.mp3" id="audioPlayer"></audio>
+
+            <div class="perpective">
+                <div class="img-song" id="imgSong">
+                
+                </div>
+            </div>
+
+            <div class="nav-buttons">
+                <div class="d-flex flex-column gap-1 align-items-center">
+                    <button class="btn-nav" id="toggleButton">
+                        <a href="#banner">
+                            <svg id="expandIcon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrows-angle-expand" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707m4.344-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707"/>
+                            </svg>
+                        </a>
+                        <a href="#musicDiv">
+                            <svg id="closeIcon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x d-none" viewBox="0 0 16 16">
+                                <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
+                            </svg> 
+                        </a> 
+                    </button>
+                    <button class="btn-nav" id="downloadBtn">
+                        <a href="../songs/getyourWish.mp3" id="downloadLink" download>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
+                                <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/>
+                                <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z"/>
+                            </svg>
+                        </a>
+                    </button>
+                    <button class="btn-nav">
+                        <a href="https://www.youtube.com/watch?v=4SZEDBFPpgw" id="YoutubeLink" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5"/>
+                                <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z"/>
+                            </svg>
+                        </a>
+                    </button>
+                </div>
+                <div>
+                    <button class="btn-nav" id="favoriteButton">
+                        <svg id="heartOutline" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-heart" viewBox="0 0 16 16">
+                            <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"/>
+                        </svg>
+                        <svg id="heartFilled" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill d-none" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="controls mt-1 pt-2">
+                
+                <div class="info-reproductor">
+                    <div class="scroll-container"> 
+                        <div class="scroll-text" >
+                            <h1 class="song-name">Get Your Wish</h1>
+                        </div>
+                    </div>
+                    <p  class="m-0 artist-name">Porter Robinson</p>
+                </div>
+                <div class="tiempo text-light">
+                    <div>
+                        <span id="currentTime">00:00</span>
+                    </div>
+                    <div>
+                        <span class="time-song">03:37</span>
+                    </div>
+                </div>
+                <div class="progress-container mb-3" id="progressContainer">
+                    <div class="progress-bar" id="progressBar"></div>
+                    <div class="thumb" id="progressThumb"></div>
+                </div>
+                <div class="d-flex align-items-center my-4  justify-content-between botones-r">
+                    <div>
+                        <button class="btn-nav btn-active-Reproductor" id="randomButton">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-shuffle" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M0 3.5A.5.5 0 0 1 .5 3H1c2.202 0 3.827 1.24 4.874 2.418.49.552.865 1.102 1.126 1.532.26-.43.636-.98 1.126-1.532C9.173 4.24 10.798 3 13 3v1c-1.798 0-3.173 1.01-4.126 2.082A9.6 9.6 0 0 0 7.556 8a9.6 9.6 0 0 0 1.317 1.918C9.828 10.99 11.204 12 13 12v1c-2.202 0-3.827-1.24-4.874-2.418A10.6 10.6 0 0 1 7 9.05c-.26.43-.636.98-1.126 1.532C4.827 11.76 3.202 13 1 13H.5a.5.5 0 0 1 0-1H1c1.798 0 3.173-1.01 4.126-2.082A9.6 9.6 0 0 0 6.444 8a9.6 9.6 0 0 0-1.317-1.918C4.172 5.01 2.796 4 1 4H.5a.5.5 0 0 1-.5-.5"/>
+                                    <path d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192m0 9v-3.932a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192"/>
+                            </svg>
+                        </button>
+                    </div>
+                    
+                    <div class="d-flex gap-3 align-items-center">
+                        <button onclick="previousSong()" id="" class="btn-song">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-rewind-fill" viewBox="0 0 16 16">
+                                <path d="M8.404 7.304a.802.802 0 0 0 0 1.392l6.363 3.692c.52.302 1.233-.043 1.233-.696V4.308c0-.653-.713-.998-1.233-.696z"/>
+                                <path d="M.404 7.304a.802.802 0 0 0 0 1.392l6.363 3.692c.52.302 1.233-.043 1.233-.696V4.308c0-.653-.713-.998-1.233-.696z"/>
+                            </svg>
+                        </button>
+                        <button class="pause-button btn-song" id="playPauseBtn" onclick="togglePlayPause()">
+                            <svg id="playIcon" xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
+                                <path d="M11.596 8.697l-6.363 3.692A.5.5 0 0 1 4 11.992V4.008a.5.5 0 0 1 .767-.424l6.363 3.692a.5.5 0 0 1 0 .852z"/>
+                            </svg>
+                            <svg id="pauseIcon" xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="currentColor" class="bi bi-pause-fill d-none" viewBox="0 0 16 16">
+                                <path d="M5.5 3.5A.5.5 0 0 1 6 3h1a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5H6a.5.5 0 0 1-.5-.5v-9zm4 0A.5.5 0 0 1 10 3h1a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-9z"/>
+                            </svg>
+                            <svg id="repeatIcon" xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="currentColor" class="bi bi-arrow-clockwise d-none" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2z"/>
+                                <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466"/>
+                            </svg>
+                        </button>
+                        <button class="btn-song" onclick="nextSong()">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-fast-forward-fill" viewBox="0 0 16 16">
+                                <path d="M7.596 7.304a.802.802 0 0 1 0 1.392l-6.363 3.692C.713 12.69 0 12.345 0 11.692V4.308c0-.653.713-.998 1.233-.696z"/>
+                                <path d="M15.596 7.304a.802.802 0 0 1 0 1.392l-6.363 3.692C8.713 12.69 8 12.345 8 11.692V4.308c0-.653.713-.998 1.233-.696z"/>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <button class="btn-nav btn-active-Reproductor" id="repeatButton">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-repeat-1" viewBox="0 0 16 16">
+                            <path d="M11 4v1.466a.25.25 0 0 0 .41.192l2.36-1.966a.25.25 0 0 0 0-.384l-2.36-1.966a.25.25 0 0 0-.41.192V3H5a5 5 0 0 0-4.48 7.223.5.5 0 0 0 .896-.446A4 4 0 0 1 5 4zm4.48 1.777a.5.5 0 0 0-.896.446A4 4 0 0 1 11 12H5.001v-1.466a.25.25 0 0 0-.41-.192l-2.36 1.966a.25.25 0 0 0 0 .384l2.36 1.966a.25.25 0 0 0 .41-.192V13h6a5 5 0 0 0 4.48-7.223Z"/>
+                            <path d="M9 5.5a.5.5 0 0 0-.854-.354l-1.75 1.75a.5.5 0 1 0 .708.708L8 6.707V10.5a.5.5 0 0 0 1 0z"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="fav-s" id="favoriteMessage">
+                <span>Se agregó a favoritos</span>
+            </div>
+        </div>
+
+        <!-- footer -->
+
+        <footer class="py-4 mt-4" id="footer">
+            <div class="d-flex justify-content-between">
+                &copy;JhonatanRS
+
+                <a href="https://github.com/JhonatanRS856" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+                    </svg>
+                </a>
+            </div>
+        </footer>
+        
+    </div>
+
+    <div id="overlay" class="d-none">
+
+    </div>
+    
+    
+
+
+    <script src="../js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
